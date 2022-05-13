@@ -1,0 +1,156 @@
+{
+  "id": "3383734",
+  "name": "rdc2",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5666448",
+      "name": "便签",
+      "font_class": "bianqian-",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "1111304",
+      "name": "收藏",
+      "font_class": "shoucangfill",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "7677930",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "23852004",
+      "name": "空心爱心",
+      "font_class": "kongxinaixin",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "23852423",
+      "name": "空心爱心",
+      "font_class": "kongxinaixin1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "29594273",
+      "name": "空心爱心",
+      "font_class": "kongxinaixin-copy",
+      "unicode": "eca2",
+      "unicode_decimal": 60578
+    },
+    {
+      "icon_id": "9909985",
+      "name": "悲伤",
+      "font_class": "beishang",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "20284863",
+      "name": "log-out-1",
+      "font_class": "log-out-1",
+      "unicode": "e7b6",
+      "unicode_decimal": 59318
+    },
+    {
+      "icon_id": "28080894",
+      "name": "循环",
+      "font_class": "xunhuan",
+      "unicode": "e703",
+      "unicode_decimal": 59139
+    },
+    {
+      "icon_id": "887909",
+      "name": "关注 (1)",
+      "font_class": "guanzhu1",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "16551232",
+      "name": "循环利用",
+      "font_class": "xunhuanliyong",
+      "unicode": "e9fb",
+      "unicode_decimal": 59899
+    },
+    {
+      "icon_id": "1256463",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1719341",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e7b7",
+      "unicode_decimal": 59319
+    },
+    {
+      "icon_id": "2066003",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e680",
+      "unicode_decimal": 59008
+    },
+    {
+      "icon_id": "4880015",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "5037312",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "5110401",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "6775641",
+      "name": "爱心 _实心",
+      "font_class": "aixin_shixin",
+      "unicode": "eca1",
+      "unicode_decimal": 60577
+    },
+    {
+      "icon_id": "13773772",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "16344718",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "16367913",
+      "name": "面性铅笔",
+      "font_class": "mianxingqianbi",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    }
+  ]
+}

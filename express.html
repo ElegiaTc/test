@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0, user-scalable=no />
+    <title>ajax</title>
+
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/myMessage.css">
+    <link rel="stylesheet" href="css/personalCenter.css">
+    <link rel="stylesheet" href="css/followFans.css">
+    <link rel="stylesheet" href="css/articleShow.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="container">
+            <h2>登 录</h2>
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <div class="tips"></div>
+            <button>点击登录</button>
+            <button>退出登录</button>
+        </div>
+    </div>
+
+    <!-- 首页 -->
+    <div class="main-page" style="display: none;">
+        <div class="top-idea">
+            <div class="iconfont">&#xe605;</div>
+            <div>首页</div>
+            <div class="iconfont">&#xe657;</div>
+            <input type="file" id="image" style="display: none;">
+        </div>
+        <div class="main-article">
+            <div class="article-nav">
+                <ul class="nav-name" id="nav-name">
+                    <li class="focus" data-index="推荐">推荐</li>
+                    <li data-index="旅行">旅行</li>
+                    <li data-index="美食">美食</li>
+                    <li data-index="时尚">时尚</li>
+                    <li data-index="彩妆">彩妆</li>
+                    <li data-index="高效">高效</li>
+                    <li data-index="护肤">护肤</li>
+                </ul>
+            </div>
+            <div class="m-main-hid">
+                <!-- 推荐页 -->
+                <div class="m-container" id="recommend">
+                    <div class="m-column">
+
+
+                    </div>
+                    <div class="m-column">
+
+                    </div>
+                </div>
+                <!-- 旅行页
+                    <div class="m-container" id="travel">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div>
+                    美食页
+                    <div class="m-container" id="food">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div>
+                    时尚页
+                    <div class="m-container" id="fashion">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div>
+                    彩妆页
+                    <div class="m-container" id="cosmetics">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div>
+                    搞笑
+                    <div class="m-container" id="funny">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div>
+                    <护肤页
+                    <div class="m-container" id="skincare">
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                        <div class="m-column">
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                            <div class="m-items"></div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 我的消息 -->
+    <div class="my-message" style="display: none;">
+        <div class="top-idea">
+            <div></div>
+            <div>消息</div>
+            <div id="create-send">创建聊天</div>
+        </div>
+        <div class="threeicon">
+            <div class="like-star">
+                <i class="iconfont">&#xeca1;</i>
+                <br>
+                赞和收藏
+            </div>
+            <div class="follow">
+                <i class="iconfont">&#xe61d;</i>
+                <br>
+                新增关注
+            </div>
+            <div class="review">
+                <i class="iconfont">&#xe622;</i>
+                <br>
+                评论和@
+            </div>
+        </div>
+        <div class="chat-list">
+            <!-- <div class="chat-items">
+                <div class="chat-avatar">
+                    <img src="" alt="">
+                </div>
+                <div class="chat-box">
+                    <div class="chat-name">ly</div>
+                    <div class="chat-intro">嘻嘻嘻</div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <!-- 个人中心 -->
+    <div class="personal-center" style="display: none;">
+        <div class="top-idea">
+            <div id="logout" class="iconfont">&#xe7b6;</div>
+            <div class="iconfont">&#xe602;</div>
+        </div>
+        <div class="main-personal">
+            <div class="headname">
+                <div class="head">
+                </div>
+                <div class="name" id="my-name">
+                    Tccc
+                </div>
+            </div>
+
+            <div class="personal-data">
+                <div class="p-container">
+                    <div class="follows">
+                        <div id="my-followers">0</div>
+                        关注
+                    </div>
+                    <div class="fans">
+                        <div id="my-fans">0</div>
+                        粉丝
+                    </div>
+                    <div class="likes-stars">
+                        <div id="my-likestars">0</div>
+                        点赞与收藏
+                    </div>
+                </div>
+                <div class="edit">
+                    编辑资料
+                </div>
+            </div>
+
+            <div class="personal-nav">
+                <div class="article personal-focus">笔记</div>
+                <div class="stars">收藏</div>
+                <div class="likes">赞过</div>
+            </div>
+            <div class="my-container">
+                <div class="my-column">
+
+                </div>
+                <div class="my-column">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章发布页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="post-article">
+            <div class="top-idea">
+                <div id="back-home" class="iconfont">
+                    &#xe610; </div>
+                <div>
+
+                </div>
+            </div>
+            <div class="upload-image">
+                <div class="upload-box">
+                    <i class="iconfont" style="display: none;">&#xe7b7;</i>
+                    <img src="" alt="" class="upload-picture">
+                </div>
+
+            </div>
+            <input type="text" placeholder="填写标题会有更多赞哦！" id="post-title">
+            <textarea name="main" id="post-content" placeholder="添加正文"></textarea>
+            <div class="button">
+                <div class="button-box">
+                    <div id="tags">#话题</div>
+                    <div id="at">@用户</div>
+                </div>
+                <div class="tagsShow"></div>
+            </div>
+            <div class="postit">发布笔记</div>
+            <div class="background" style="display: none;">
+                <div class="send-box">
+                    <input type="text" id="send-tags" placeholder="请输入要添加的Tag">
+                    <div id="cancel">取消</div>
+                    <div id="confirm">确定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 资料编辑页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="edit-message">
+            <div class="top-idea">
+                <div id="return" class="iconfont">&#xe610;</div>
+                <div>编辑资料</div>
+                <div></div>
+            </div>
+            <div class="avatar">
+
+            </div>
+            <input id="uploadImage" type="file" style="display: none;">
+            <input id="uploadbgImage" type="file" style="display: none;">
+            <div class="e-container">
+                <div class="e-message">
+                    <div>名字</div>
+                    <div id="my-editname"></div>
+                </div>
+                <div class="e-message">
+                    <div>性别</div>
+                    <div id="my-sex"></div>
+                </div>
+                <div class="e-message">
+                    <div>生日</div>
+                    <div id="my-birthday"></div>
+                </div>
+                <div class="e-message">
+                    <div>地区</div>
+                    <div id="my-region"></div>
+                </div>
+                <div class="e-message">
+                    <div>简介</div>
+                    <div id="my-intro"></div>
+                </div>
+                <div class="e-message">
+                    <div>背景图</div>
+                    <div class="bg-image">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="edit-mask" style="display: none;">
+                <div class="edit-box">
+                    <div class="top-idea">
+                        <div class="edit-cancel">取消</div>
+                        <div class="edit-edit">编辑</div>
+                        <div class="edit-store">保存</div>
+                    </div>
+                    <input type="text" id="edit-text">
+                    <div class="edit-tips">请设置适当长度的字符哦</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文章搜索页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="searching">
+            <div class="top-idea">
+                <div id="search-back">
+                    ← </div>
+                <input type="text" id="searching" placeholder="请输入内容">
+                <div id="click-search">搜索</div>
+            </div>
+            <div class="search-nav">
+                <div class="article personal-focus">文章</div>
+                <div class="user">用户</div>
+            </div>
+            <div class="m-container" id="search-article">
+                <div class="m-column">
+
+                </div>
+                <div class="m-column">
+
+                </div>
+                <div class="search-tips" style="display: none;">
+                    没有更多了
+                </div>
+            </div>
+            <div id="search-user" style="display: none;">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 关注粉丝页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="follow-fans">
+            <div class="top-idea">
+                <div id="return-personal" class="iconfont">&#xe610;</div>
+                <div id="forf">粉丝</div>
+                <div style="color: white;">→</div>
+            </div>
+            <div class="ff-container">
+                <!-- <div class="ff-items">
+                    <div class="ff-box">
+                        <div class="ff-avatar">
+                            <img src="" alt="">
+                        </div>
+                        <div class="ff-name">ly</div>
+                    </div>
+                    <div class="ff-follow">未关注</div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 获赞收藏页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="like-and-star">
+            <div class="top-idea">
+                <div id="return-to-personal" class="iconfont">&#xe610;</div>
+                <div id="forf">获赞与收藏</div>
+                <div style="color: rgb(255, 255, 255);">→</div>
+            </div>
+            <div class="top-box">
+                <div class="get-like personal-focus">获赞</div>
+                <div class="get-star">收藏</div>
+            </div>
+            <div class="las-container">
+                <!-- <div class="las-items">
+                    <div class="las-box">
+                        <div class="las-avatar">
+                            <img src="" alt="">
+                        </div>
+                        <div class="las-name">ly</div>
+                        <div>赞了你的笔记</div>
+                    </div>
+                    <div class="ar-picture">
+                        <img src="" alt="">
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 评论和@页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="review-and-at">
+            <div class="top-idea">
+                <div id="return-to-message" class="iconfont">&#xe610;</div>
+                <div id="forf">收到的评论和@</div>
+                <div style="color: rgb(255, 255, 255);">→</div>
+            </div>
+            <div class="raa-container">
+                <!-- <div class="raa-items">
+                    <div class="raa-box">
+                        <div class="raa-avatar">
+                            <img src="" alt="">
+                        </div>
+                        <div class="raa-name">ly</div>
+                        <div>评论了你的笔记</div>
+                    </div>
+                    <div class="ar-picture">
+                        <img src="" alt="">
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建聊天页 -->
+    <div class="big-container" style="z-index: -1;">
+        <div class="choose-send">
+            <div class="top-idea">
+                <div id="return-back-message" class="iconfont">&#xe610;</div>
+                <div>发私信</div>
+                <div style="color: rgb(255, 255, 255);">→</div>
+            </div>
+            <div class="choose-container">
+                <!-- <div class="choose-boxs">
+                    <div class="choose-items">
+                        <div class="avatar">
+                            <img src="" alt="">
+                        </div>
+                        <div class="name">ly</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 聊天记录页 -->
+    <div class="chat-window" style="display: none;">
+        <div class="top-idea">
+            <div id="return-message" class="iconfont">&#xe610;</div>
+            <div id="chat-name">ly</div>
+            <div style="color: rgb(245, 245, 245);">→</div>
+        </div>
+        <div class="chat-page">
+            <!-- <div class="your-part">
+                <div class="chat-avatar">
+                    <img src="" alt="">
+                </div>
+                <div class="chat-record">hallo</div>
+            </div>
+            <div class="my-part">
+                <div class="chat-avatar">
+                    <img src="" alt="">
+                </div>
+                <div class="chat-record">hallo111111111111111111111111111111111111111111111111</div>
+            </div> -->
+
+        </div>
+        <div class="send">
+            <input type="text" id="send-message" placeholder="发消息……">
+            <button id="click-send" style="display: none;">发送</button>
+        </div>
+    </div>
+
+    <!-- 文章详情页 -->
+    <div class="article-show" style="display: none;">
+        <div class="top-idea">
+            <div class="as-box">
+                <div id="show-back" class="iconfont">
+                    &#xe610; </div>
+                <div class="avatar">
+                    <img src="" alt="" id="author-avatar">
+                </div>
+                <div class="name" id="author-name">tc</div>
+            </div>
+            <div class="as-box">
+                <div class="if-follow">未关注</div>
+                <div class="share iconfont">&#xe602;</div>
+            </div>
+        </div>
+        <div class="hidden-picture">
+
+            <div class="picture-container">
+                <!-- <div class="p-items">
+                    <img src="http://175.178.193.182:8080/public/img/upload_c1acf3c02933997d0e84460be07f82a7.jpg"
+                        alt="">
+                </div>
+                <div class="p-items">
+                    <img src="http://175.178.193.182:8080/public/img/upload_1c728dd223859d8f46e15712e6e5e904.jpg"
+                        alt="">
+                </div>
+                <div class="p-items">
+                    <img src="http://175.178.193.182:8080/public/img/upload_8362b729c9fedd112905d93a9020b4d0.jpg"
+                        alt="">
+                </div>
+                <div class="p-items">
+                    <img src="http://175.178.193.182:8080/public/img/upload_32ea2e2ac0074252a5ad8e44af048c29.jpg"
+                        alt="">
+                </div> -->
+
+            </div>
+            <ul id="change-picture">
+                <!-- <li class="focus-picture"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li> -->
+            </ul>
+        </div>
+        <h4 class="title">今天一定要早睡</h4>
+        <p class="content">早睡早起好身体</p>
+        <div class="tags"></div>
+        <div class="others-box">
+            <div class="dates">2-8</div>
+            <div class="delate-article" style="display: none;">删除文章</div>
+            <div class="unlike"> <i class="iconfont">&#xe656;</i> 不喜欢</div>
+        </div>
+        <div class="comments-section" id="to-review">
+            <p>共<span id="reviews">1</span>条评论</p>
+            <div class="cs-box">
+                <div class="myavatar">
+                    <img src="" alt="">
+                </div>
+                <input type="text" placeholder="说点什么吧，万一火了呢" id="post-review">
+            </div>
+        </div>
+        <div class="comments-container">
+            <!-- <div class="comments-items">
+                        <div class="parent-row">
+                            <div class="avatar">
+                                <img src="" alt="">
+                            </div>
+                            <div class="main-box">
+                                <div class="name">ztc</div>
+                                <div class="review-contact">早睡！</div>
+                                <div class="review-date">2-9</div>
+                            </div>
+                            <div class="review-like">♥ <br> 0</div>
+                        </div>
+                    </div>
+                    <div class="comments-items">
+                        <div class="parent-row">
+                            <div class="avatar">
+                                <img src="" alt="">
+                            </div>
+                            <div class="main-box">
+                                <div class="name">ztc</div>
+                                <div class="review-contact">早睡！</div>
+                                <div class="review-date">2-9</div>
+                            </div>
+                            <div class="review-like">♥ <br> 0</div>
+                        </div>
+                        <div class="son-row">
+                            <div class="white"></div>
+                            <div class="main-sonbox">
+                                <div class="son-avatar">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="son-box">
+                                    <div class="son-name">ly</div>
+                                    <div class="son-contact">不早睡就不是辣妹了！<span>2-9</span></div>
+                                </div>
+                            </div>
+                            <div class="son-like">♥ <br> 0</div>
+                        </div>
+                        <div class="son-row">
+                            <div class="white"></div>
+                            <div class="main-sonbox">
+                                <div class="son-avatar">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="son-box">
+                                    <div class="son-name">ly</div>
+                                    <div class="son-contact">不早睡就不是辣妹了！<span>2-9</span></div>
+                                </div>
+                            </div>
+                            <div class="son-like">♥ <br> 0</div>
+                        </div>
+                    </div> -->
+        </div>
+        <div class="the-end">- THE END -</div>
+
+        <div class="bottom">
+            <input type="text" id="say-something" placeholder="说点什么……">
+            <div class="icons">
+                <div class="likes"><i class="iconfont" id="like-icon">&#xe614;</i><span id="like-num"></span></div>
+                <div class="stars"><i class="iconfont" id="star-icon">&#xe615;</i><span id="star-num"></span></div>
+                <div class="reviews"><a href="#to-review"><i class="iconfont">&#xe622;</i><span
+                            id="review-num">11</span></a></div>
+            </div>
+            <button id="send-review" style="display: none;">发送</button>
+        </div>
+        <div class="show-mask" style="display: none;"></div>
+    </div>
+
+    <!-- 他人主页 -->
+    <div class="other-page" style="display: none;">
+        <div class="top-idea">
+            <div id="return-back" class="iconfont">&#xe610;</div>
+        </div>
+        <div class="main-page">
+            <div class="headname">
+                <div class="head">
+                    <img src="" alt="" id="other-avatar">
+                </div>
+                <div class="name" id="other-name">
+                    ly
+                </div>
+            </div>
+
+            <div class="other-data">
+                <div class="o-container">
+                    <div class="o-follows">
+                        <div id="o-followers">0</div>
+                        关注
+                    </div>
+                    <div class="o-fans">
+                        <div id="o-fans">0</div>
+                        粉丝
+                    </div>
+                    <div class="o-likes-stars">
+                        <div id="o-likestars">0</div>
+                        点赞与收藏
+                    </div>
+                </div>
+                <div class="click-follow">
+                    关注
+                </div>
+                <div class="to-message" style="display: none;">
+                    发消息
+                </div>
+            </div>
+
+            <div class="other-nav">
+                <div class="o-article personal-focus">笔记</div>
+                <div class="o-stars">收藏</div>
+                <div class="o-likes">赞过</div>
+            </div>
+            <div class="other-container">
+                <div class="other-column">
+
+                </div>
+                <div class="other-column">
+
+                </div>
+            </div>
+        </div>
+        <div class="o-mask" style="display: none;">
+            <div class="show-page">
+                <h4>获赞与收藏</h4>
+                <ul>
+                    <li>当前发布笔记数 <span class="o-post-num">0</span></li>
+                    <li>当前获得点赞数 <span class="o-like-num">0</span></li>
+                    <li>当前获得收藏数 <span class="o-star-num">0</span></li>
+                </ul>
+                <div class="i-know">我知道了</div>
+            </div>
+        </div>
+        <div class="click-tips" style="display: none;">暂时无法查看哦！</div>
+        <div class="click-tipsend" style="display: none;">对方尚未关注你！</div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom-tab" style="display: none;">
+        <div class="focus"><i class="iconfont">&#xe703;</i><br>首页</div>
+        <div><i class="iconfont">&#xe622;</i><br>我的消息</div>
+        <div><i class="iconfont">&#xe680;</i><br>个人中心</div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+        integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+        crossorigin="anonymous"></script>
+
+    <script src="server.js"> </script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+    <!-- <script src="http://175.178.193.182:8080/socket.io/socket.io.js"></script> -->
+
+</body>
+
+</html>
